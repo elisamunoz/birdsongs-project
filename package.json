@@ -1,0 +1,18 @@
+{
+  "name": "birdsListing",
+  "description": "Website with vanillaJs + JQuery connected to an API show show birds information",
+  "author": {
+    "name": "Elisa Munoz",
+    "url": "https://elisamunoz.github.io/birdsongs-project/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elisamunoz/birdsongs-project"
+  },
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://elisamunoz.github.io/birdsongs-project/",
+  "dependencies": {
+    "jquey": "0.0.1-security"
+  }
+}
