@@ -1,7 +1,52 @@
+/** General paddings, margins, styles **/
+
+body,
+html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+
+.background-image {
+    min-height: calc(100% - 40px);
+    width: 100%;
+    display: block;
+    background-size: cover;
+    padding-top: 20px;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+}
+
+/* Header */
+.nav {
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    background: white;
+}
+
+/* home */
+.home {
+    background-image: url("../images/01.home-pic.jpg");
+}
+
 .jumbotron {
     background-color:  rgba(0, 0, 0, 0);
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
 }
 
 .no-outline {
     border: none;
+}
+
+/* Bird files */
+.bird-file {
+    background-color: pink;
 }
