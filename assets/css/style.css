@@ -19,6 +19,10 @@ html {
     background-attachment: fixed;
 }
 
+.bold-text {
+    font-weight: 700;
+}
+
 /* Header */
 .nav {
     position: fixed;
