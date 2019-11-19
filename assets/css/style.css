@@ -19,6 +19,10 @@ html {
     background-attachment: fixed;
 }
 
+div#result-table_filter.dataTables_filter {
+    display: none;
+}
+
 /* Header */
 .nav {
     position: fixed;

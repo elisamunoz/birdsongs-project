@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">  <!--Table library-->
     <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
@@ -55,8 +56,37 @@
 
     <!-- Search result -->
     <section class="search-result">
-      <h1 class="title">Tapaculo chucao</h1>
-      <h2 class="sub-title"><i>Scelorchilus rubecula</i></h2>
+      <h1 class="title">Chile</h1>
+
+      <div>
+        <table id="result-table" class="display">
+          <thead>
+              <tr>
+                  <th>Register</th>
+                  <th>Recordist</th>
+                  <th>Length</th>
+                  <th>Country</th>
+                  <th>Type</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>505950</td>
+                  <td>Heraldo V. Norambuena</td>
+                  <td>1:30</td>
+                  <td>Chile</td>
+                  <td>Adult, male, song</td>
+              </tr>
+              <tr>
+                  <td>470205</td>
+                  <td>Bobby Wilcox</td>
+                  <td>0:38</td>
+                  <td>Argentina</td>
+                  <td>song</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
 
     </section>
     <!--/Search result-->
@@ -65,7 +95,18 @@
     <!-- Bird file -->
     <section class="bird-file">
       <h1 class="title">Tapaculo chucao</h1>
-      <h2 class="sub-title"><i>Scelorchilus rubecula</i></h2>
+      <h3 class="sub-title"><i>Scelorchilus rubecula</i></h2>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6">
+            
+          </div>
+          <div class="col-xl-6">
+            
+          </div>
+        </div>
+      </div>
 
     </section>
     <!--/Bird file-->
@@ -101,6 +142,7 @@
     <!-- /Footer-->
 
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script><!--JQuery table-->
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
