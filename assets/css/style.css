@@ -54,3 +54,8 @@ html {
 .bird-file {
     background-color: pink;
 }
+
+/* About */
+.about {
+    background-image: url("../images/02.about-pic.jpg");
+}

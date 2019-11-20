@@ -6,9 +6,32 @@ $(document).ready(function(){
 
 
 function searchByName(){
-    console.log("TODO: add Search functionality")
+
+    // lo que escribe para buscar
+    var name = $("#input-by-name").val(); 
+    var url = `https://www.xeno-canto.org/api/2/recordings?query=gen:${name}`;
+
+    getData(url, printTable);
 }
 
 function searchRandomly(){
     console.log("TODO: add Surprise me functionality")
+}
+
+function getData(url, cb) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            cb(JSON.parse(this.responseText));       
+        }
+    };
+
+    xhr.open("GET", url);
+    xhr.send();
+}
+
+
+function printTable(data) {
+    console.log(data);
 }
