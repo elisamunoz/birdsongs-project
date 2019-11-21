@@ -9,7 +9,7 @@ function searchByName(){
 
     // lo que escribe para buscar
     var name = $("#input-by-name").val(); 
-    var url = `https://www.xeno-canto.org/api/2/recordings?query=gen:${name}`;
+    var url = `https://cors-anywhere.herokuapp.com/https://www.xeno-canto.org/api/2/recordings?query=gen:${name}`;
 
     getData(url, printTable);
 }
@@ -32,6 +32,10 @@ function getData(url, cb) {
 }
 
 
-function printTable(data) {
+function printTable(data={}) {
+    const recordings = data.recordings || []
+
+
     console.log(data);
+    console.log(recordings);
 }
