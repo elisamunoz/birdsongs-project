@@ -40,10 +40,12 @@ html {
 .jumbotron {
     background-color:  rgba(0, 0, 0, 0);
     text-align: center;
+    margin-top: 10%;
 }
 
-.container {
-    max-width: 600px;
+.search-bars {
+    max-width: 400px;
+    margin: auto;
 }
 
 .no-outline {
@@ -55,7 +57,29 @@ html {
     background-color: pink;
 }
 
+.table td, .table th {
+    border-top: none;
+}
+
+text-center {
+    text-align: center;
+}
+#map {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+}
+
 /* About */
 .about {
     background-image: url("../images/02.about-pic.jpg");
+}
+
+.about-text {
+    margin: auto;
+    margin-top: 10%;
+    max-width: 1200px;
+    text-align: center;
+    background-color: rgb(250, 250, 250, 0.8);
+    border-radius: 4px;
+    padding: 50px;
 }

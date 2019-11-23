@@ -1,24 +1,64 @@
+// Call  functions
 $(document).ready(function(){
-    $("#search").click(searchByName);
-
+    $("#search-by-genus").click(searchByGenus);
     $("#surpriseMe").click(searchRandomly);
+    initMap();
 });
 
+/* --------------------- */
+/* --- Get Info -------- */
+/* --------------------- */
+function searchByGenus() {
+   
+    var genus = $("#input-by-name").val();
+    var url = `https://cors-anywhere.herokuapp.com/https://www.xeno-canto.org/api/2/recordings?query=gen:${genus}`;
 
-function searchByName(){
-
-    // lo que escribe para buscar
-    var name = $("#input-by-name").val(); 
-    var url = `https://cors-anywhere.herokuapp.com/https://www.xeno-canto.org/api/2/recordings?query=gen:${name}`;
-
-    getData(url, printTable);
+    getApiData(url, renderTable)
 }
 
 function searchRandomly(){
     console.log("TODO: add Surprise me functionality")
 }
 
-function getData(url, cb) {
+/* --------------------- */
+/* --- Render Table ---- */
+/* --------------------- */
+function renderTable(birdInfo = {}) {
+    const birdsList = birdInfo.recordings;
+
+    var tableBody = document.getElementById("tableBody");
+    var totalRows = [];
+
+    birdsList.forEach(function(birdData){
+        totalRows.push(renderTableRow(birdData));
+    });
+
+    tableBody.innerHTML = totalRows;
+}
+
+function renderTableRow(birdInfo = {}){
+    var gen = birdInfo.gen;
+
+    return `
+    <tr>
+    <td class="bold-text">${birdInfo.id}</td>
+    <td class="d-none d-lg-block"><i>${birdInfo.gen} ${birdInfo.sp}</i></td>
+    <td>${birdInfo.length}</td>
+    <td>${birdInfo.cnt}</td>
+    <td>${birdInfo.type}</td>
+  </tr>
+    `
+
+}
+
+
+/* -------------------- */
+/* --- Helper Funcs --- */
+/* -------------------- */
+function getApiData(
+    url, // String
+    cb   // function
+) {
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
@@ -31,11 +71,21 @@ function getData(url, cb) {
     xhr.send();
 }
 
+/* -------------------- */
+/* --- Render Map  --- */
+/* -------------------- */
+function initMap() {
+    setMapMarker({lat: -38.6417, lng: -71.7017})
+}
 
-function printTable(data={}) {
-    const recordings = data.recordings || []
-
-
-    console.log(data);
-    console.log(recordings);
+function setMapMarker(position = {}) {
+    // The map, centered at position
+    var map = new google.maps.Map(
+        document.getElementById('map'), {zoom: 4, center: position}
+    );
+    // The marker, positioned at Uluru
+    new google.maps.Marker({
+        position: position,
+        map: map
+    });
 }
