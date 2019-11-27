@@ -68,6 +68,7 @@ function renderTable(birdInfo = {}) {
     tableBody.innerHTML = totalRows;
 
     $(".search-result").fadeIn(1000);
+    smoothieScrollTo("search-result");
 }
 
 function renderTableRow(birdInfo = {}) {
@@ -117,6 +118,7 @@ function renderFileInfo(birdId) {
         }
     });
     $(".bird-file").fadeIn(1000);
+    smoothieScrollTo("bird-file");
 }
 
 
@@ -223,6 +225,16 @@ function setMapMarker(position = {}) {
 
 function mapNotFound(img){
     var errorImg = document.getElementById('map');
+}
 
 
+function smoothieScrollTo(id) {
+    
+    var target = $(`#${id}`);
+
+    if( target.length ) {
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
 }
