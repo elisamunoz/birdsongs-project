@@ -42,6 +42,10 @@ text-center {
     margin: 20px 0;
 }
 
+.search-result, .bird-file {
+    display: none;
+}
+
 /* Header */
 .nav {
     position: fixed;
@@ -92,6 +96,9 @@ text-center {
 #map {
     height: 400px;  /* The height is 400 pixels */
     width: 100%;  /* The width is the width of the web page */
+}
+
+.map-margin {
     margin-bottom: 40px;
 }
 
@@ -147,4 +154,17 @@ text-center {
 
 .social-links {
     text-align: center;
+}
+
+/* Media queries*/
+@media (min-width: 768px) {
+    .width-90 {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .width-80 {
+        max-width: 80%;
+        margin: auto;
+    }
 }

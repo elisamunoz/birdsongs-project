@@ -66,6 +66,8 @@ function renderTable(birdInfo = {}) {
     });
 
     tableBody.innerHTML = totalRows;
+
+    $(".search-result").fadeIn(1000);
 }
 
 function renderTableRow(birdInfo = {}) {
@@ -82,6 +84,8 @@ function renderTableRow(birdInfo = {}) {
     `
 }
 
+
+
 function renderFileInfo(birdId) {
     var url = `https://cors-anywhere.herokuapp.com/https://www.xeno-canto.org/api/2/recordings?query=nr:${birdId}`;
     var urlIFrame = `https://www.xeno-canto.org/${birdId}/embed?simple=1`
@@ -97,11 +101,22 @@ function renderFileInfo(birdId) {
         fileBody.innerHTML = renderBirdFile(birdData);
         fileTitle.innerText = birdData.en;
         fileSubTitle.innerText = birdData.gen +" "+ birdData.sp;
-        setMapMarker({
-            lat: parseInt(birdData.lat),
-            lng: parseInt(birdData.lng)
-        });
+
+        if (!birdData.lat || !birdData.lng){
+            $(".location-map").hide();
+            $(".no-location-image").fadeIn(1000);
+
+        }else{
+            $(".no-location-image").hide();
+            $(".location-map").fadeIn(1000);
+           
+            setMapMarker({
+                lat: parseInt(birdData.lat),
+                lng: parseInt(birdData.lng)
+            });
+        }
     });
+    $(".bird-file").fadeIn(1000);
 }
 
 
@@ -194,6 +209,7 @@ function initMap() {
 }
 
 function setMapMarker(position = {}) {
+
     // The map, centered at position
     var map = new google.maps.Map(
         document.getElementById('map'), {zoom: 6, center: position}
@@ -203,4 +219,10 @@ function setMapMarker(position = {}) {
         position: position,
         map: map
     });
+}
+
+function mapNotFound(img){
+    var errorImg = document.getElementById('map');
+
+
 }
