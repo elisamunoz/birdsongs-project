@@ -7,7 +7,7 @@
     <title>Birdsongs of the World</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400, 500,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
@@ -20,7 +20,7 @@
 </head>
 <body>
     <!-- Header -->
-    <ul class="nav justify-content-end">
+    <ul class="nav justify-content-end uppercase">
       <li class="nav-item">
         <a class="nav-link active" href="index.html">Home</a>
       </li>
@@ -47,8 +47,8 @@
                 </select>
               </form>
               <input class="form-control search-bar" id="input-by-name" type="text" placeholder="Search by genus">
-              <button type="button" id="search-bird" class="btn btn-success search-btn" >Search</button>
-              <button type="button" id="surpriseMe" class="btn btn-success search-btn">Surprise me!</button>
+              <button type="button" id="search-bird" class="btn search-btn" >Search</button>
+              <button type="button" id="surpriseMe" class="btn search-btn">Surprise me!</button>
           </div>
         </div>
     </div>
@@ -66,8 +66,8 @@
                   <th class="d-none d-lg-block" scope="col ">Scientific Name</th>
                   <th scope="col">Common Name</th>
                   <th scope="col">Length</th>
-                  <th scope="col">Country</th>
-                  <th scope="col">Type</th>
+                  <th class="d-none d-lg-block" scope="col">Country</th>
+                  <th class="d-none d-lg-block"scope="col">Type</th>
                 </tr>
             </thead>
             <tbody id='tableBody'>
@@ -132,28 +132,20 @@
     <!-- Footer-->
      <section class="footer">
       <div class="container">
-            <div class="row">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-3">
-                    <h5 class="uppercase text-center">Elisa Munoz</h5>
-                </div>
-                    <ul class="list-inline social-links text-center col-sm-3">
-                        <li class="list-inline-item">
-                            <a target="_blank" href="https://github.com/elisamunoz">
-                            <i class="fab fa-github fa-footer" aria-hidden="true"></i>
-                            <span class="sr-only">GitHub</span>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a target="_blank" href="#">
-                            <i class="fab fa-linkedin fa-footer" aria-hidden="true"></i>
-                            <span class="sr-only">LinkedIn</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-3"></div>
-            </div>
+          <ul class="list-inline social-links text-center col-sm-3">
+              <li class="list-inline-item">
+                  <a target="_blank" href="https://github.com/elisamunoz">
+                  <i class="fab fa-github fa-footer" aria-hidden="true"></i>
+                  <span class="sr-only">GitHub</span>
+                  </a>
+              </li>
+              <li class="list-inline-item">
+                  <a target="_blank" href="#">
+                  <i class="fab fa-linkedin fa-footer" aria-hidden="true"></i>
+                  <span class="sr-only">LinkedIn</span>
+                  </a>
+              </li>
+          </ul>
         </div>
     </section>
     <!-- /Footer-->

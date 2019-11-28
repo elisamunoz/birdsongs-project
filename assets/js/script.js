@@ -65,7 +65,7 @@ function renderTable(birdInfo = {}) {
         totalRows.push(renderTableRow(birdData));
     });
 
-    tableBody.innerHTML = totalRows;
+    tableBody.innerHTML = totalRows.join("");
 
     $(".search-result").fadeIn(1000);
     smoothieScrollTo("search-result");
@@ -75,12 +75,12 @@ function renderTableRow(birdInfo = {}) {
 
     return `
     <tr>
-    <td onClick="renderFileInfo(${birdInfo.id});" class="bold-text">${birdInfo.id}</td>
+    <td onClick="renderFileInfo(${birdInfo.id});" class="bold-text bird-id">${birdInfo.id}</td>
     <td class="d-none d-lg-block"><i>${birdInfo.gen} ${birdInfo.sp}</i></td>
     <td>${birdInfo.en}</td>
     <td>${birdInfo.length} min</td>
-    <td>${birdInfo.cnt}</td>
-    <td>${birdInfo.type}</td>
+    <td class="d-none d-lg-block">${birdInfo.cnt}</td>
+    <td class="d-none d-lg-block">${birdInfo.type}</td>
   </tr>
     `
 }

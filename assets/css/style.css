@@ -5,8 +5,13 @@ html {
     height: 100%;
     font-family: 'Roboto', sans-serif;
     text-align: justify;
+    color: #352523;
 }
 
+.uppercase {
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
 
 .background-image {
     min-height: calc(100% - 40px);
@@ -52,6 +57,15 @@ text-center {
     top: 0;
     z-index: 5;
     width: 100%;
+    background-color: #f7f7f7;
+}
+
+.nav-link {
+    color: #352523;
+}
+
+.nav-link:hover {
+    color: #ec3809;
 }
 
 /* home */
@@ -66,7 +80,7 @@ text-center {
 }
 
 .home-title-container {
-    max-width: 650px;
+    max-width: 700px;
     background-color:  rgb(250, 250, 250, 0.8);
     border-radius: 10px;
 }
@@ -74,6 +88,8 @@ text-center {
 .display-4 {
     padding-top: 30px;
     padding-bottom: 10px;
+    font-family: montserrat;
+    font-weight: 400;
 }
 
 .search-bars {
@@ -87,17 +103,42 @@ text-center {
 
 .search-btn {
     margin: 20px 0 30px;
+    border-radius: 25px;
+    color: #fafafa;
+    background-color: #3e2c2a;
+    border-color: #110c0c;
+}
+
+.btn:hover{
+    background-color: #2a201f;
+    color: #f7f7f7;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(62, 44, 42, 0.25);
 }
 
 .search-bar {
-    border: none;
+    border-color: #35252329;
     width: 100%;
     border-radius: 25px;
-    height: 30px;
+    height: 36px;
     padding: 2px 12px;
+    outline: none;
 }
 
+.search-bar:focus {
+    box-shadow: 0 0 0 0.2rem rgba(62, 44, 42, 0.25);
+    border: none;
+    
+}
+
+
+
 /* Search result*/
+.location-map, .no-location-image {
+    display: none;
+}
 
 
 /* Bird files */
@@ -108,6 +149,14 @@ text-center {
 
 .table td, .table th {
     border-top: none;
+}
+
+.bird-id {
+    cursor: pointer;
+}
+
+.bird-id:hover {
+    color: #ec3809;
 }
 
 #map {
@@ -125,17 +174,17 @@ text-center {
 }
 
 .about-p {
-    padding: 10px 0;
+    padding: 25px 0;
 }
 
 .about-text {
     margin: auto;
-    margin-top: 8%;
+    margin-top: 7%;
     max-width: 1200px;
     text-align: center;
     background-color: rgb(250, 250, 250, 0.8);
     border-radius: 4px;
-    padding: 50px;
+    padding: 40px 50px;
 }
 
 /* Suggestions */
@@ -155,8 +204,24 @@ text-center {
 
 /* Footer */
 
+.footer {
+    background-color: #f7f7f7;
+    height: 40px;
+    padding-top: 6px;
+}
+
 .social-links {
     text-align: center;
+    margin-bottom: 0px;
+    margin: auto;
+}
+
+.fab {
+    color: #352523;
+}
+
+.fab:hover {
+    color: #ec3809;
 }
 
 /* Media queries*/
