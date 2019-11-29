@@ -130,12 +130,14 @@ text-center {
 .search-bar:focus {
     box-shadow: 0 0 0 0.2rem rgba(62, 44, 42, 0.25);
     border: none;
-    
 }
 
-
-
 /* Search result*/
+
+.search-result {
+    background-image: #f7f7f7;
+}
+
 .location-map, .no-location-image {
     display: none;
 }
@@ -193,14 +195,13 @@ text-center {
     text-align: center;
 }
 
-.text-right, .text-left {
-    padding-top: 20%;
+.bird-suggestions {
+    padding: 30px;
 }
 
-.text-left {
-    text-align: left;
+.suggestion-text-img {
+    padding-top: 40px;
 }
-
 
 /* Footer */
 
@@ -218,6 +219,8 @@ text-center {
 
 .fab {
     color: #352523;
+    font-size: 22px;
+    padding-top: 3px;
 }
 
 .fab:hover {
@@ -235,4 +238,14 @@ text-center {
         max-width: 80%;
         margin: auto;
     }
+}
+
+@media (max-width: 767.98px) { 
+.type {
+    display: none;
+    }
+
+.jp-type-single {
+    width: 250px;
+}
 }

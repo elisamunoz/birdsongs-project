@@ -80,7 +80,7 @@ function renderTableRow(birdInfo = {}) {
     <td>${birdInfo.en}</td>
     <td>${birdInfo.length} min</td>
     <td class="d-none d-lg-block">${birdInfo.cnt}</td>
-    <td class="d-none d-lg-block">${birdInfo.type}</td>
+    <td class="type">${birdInfo.type}</td>
   </tr>
     `
 }
