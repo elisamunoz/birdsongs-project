@@ -5,9 +5,9 @@ $(document).ready(function() {
   initMap();
 });
 
-/* --------------------- */
-/* --- Get Info -------- */
-/* --------------------- */
+/* ----------------------------- */
+/* --- Get Info from API-------- */
+/* ----------------------------- */
 function searchBird() {
   var country = $("#search-by-country").val();
   var genus = $("#input-by-name").val();
@@ -48,7 +48,7 @@ function searchRandomly() {
 /* --- Render Table ---- */
 /* --------------------- */
 function renderTitle(text) {
-  const birdTitle = document.getElementById("title-search-result");
+  const birdTitle = document.getElementById("title-search-result"); // renders search result title
 
   birdTitle.innerHTML = text;
 }
@@ -56,6 +56,7 @@ function renderTitle(text) {
 function renderTable(birdInfo = {}) {
   const birdsList = birdInfo.recordings;
 
+  var table = $("#search-result-table");
   var tableBody = document.getElementById("tableBody");
   var totalRows = [];
 
@@ -63,7 +64,10 @@ function renderTable(birdInfo = {}) {
     totalRows.push(renderTableRow(birdData));
   });
 
+  // Data Table call
+  table.DataTable().destroy(); // destroy previous search to print table again
   tableBody.innerHTML = totalRows.join("");
+  table.DataTable().draw();
 
   //adds smoothie scroll to search result section
   $(".search-result").fadeIn(1000);
@@ -183,10 +187,9 @@ function renderBirdFile(birdInfo) {
 /* -------------------- */
 /* --- Helper Funcs --- */
 /* -------------------- */
-function getApiData(
-  url, // String
-  cb // function
-) {
+function getApiData(url, cb) {
+  //url = string
+  //cb = function
   var xhr = new XMLHttpRequest();
 
   xhr.onreadystatechange = function() {
