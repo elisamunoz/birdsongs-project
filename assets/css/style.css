@@ -139,8 +139,25 @@ text-center {
 
 /* Search result*/
 
+.dataTables_filter input {
+  border-radius: 25px;
+  outline: none;
+  border-color: #35252329;
+  padding: 1px 10px;
+  width: 160x;
+}
+
 .search-result {
-  background-image: #f7f7f7;
+  background-color: #f7f7f7;
+}
+
+.dataTables_length label select {
+  border-radius: 10px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  border-radius: 10px;
 }
 
 .location-map,
@@ -150,7 +167,7 @@ text-center {
 
 /* Bird files */
 .bird-file {
-  background-color: pink;
+  background-image: url("../images/012.bird-file-pic.jpg");
   min-height: calc(100% - 40px);
 }
 
@@ -197,24 +214,40 @@ text-center {
 
 /* Suggestions */
 
-.carousel-inner > .carousel-item > img {
+.suggestions {
+  background-image: url("../images/03.suggestions-pic.jpg");
+}
+
+.transparent-overlay {
   position: absolute;
+  height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.carousel.slide {
+  margin: auto;
+  width: 80%;
+  margin-top: 3%;
+}
+
+.carousel-inner {
+  color: f7f7f7;
+}
+
+.img-center {
   width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  object-position: center;
 }
 
-.carrousel {
-  height: 500px;
+.carousel-caption {
+  background-color: rgba(53, 37, 35, 0.4);
 }
 
-.carousel-inner > .carousel-item {
-  height: 500px;
+.carousel-caption h5 {
+  font-style: italic;
 }
 
 .suggestion-subtitle {
@@ -276,8 +309,17 @@ text-center {
   .jumbotron {
     margin: 0;
   }
+}
 
-  .carousel-inner {
-    height: 130px;
-  }
+.dataTable tr.even {
+  background-color: #efefef;
+}
+
+.dataTable tr:hover {
+  background-color: #dccbc9;
+}
+
+.table.dataTable thead th {
+  background: #78544a;
+  color: #f7f7f7;
 }
