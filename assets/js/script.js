@@ -3,6 +3,8 @@ $(document).ready(function() {
   $("#search-bird").click(searchBird);
   $("#surpriseMe").click(searchRandomly);
   initMap();
+
+  $(window).scroll(solidNavBar); //??
 });
 
 /* ----------------------------- */
@@ -41,7 +43,14 @@ function searchBird() {
 }
 
 function searchRandomly() {
-  console.log("TODO: add Surprise me functionality");
+  var birdList = [125694, 153133, 126083, 314575, 60001];
+  // hidde content
+
+  // get random birdId from array
+  var birdId = birdList[Math.floor(Math.random() * birdList.length)];
+
+  // render info
+  renderFileInfo(birdId);
 }
 
 /* --------------------- */
@@ -77,7 +86,7 @@ function renderTable(birdInfo = {}) {
 function renderTableRow(birdInfo = {}) {
   return `
     <tr>
-    <td onClick="renderFileInfo(${birdInfo.id});" class="bold-text bird-id">More Information</td>
+    <td onClick="renderFileInfo(${birdInfo.id});" class="bold-text bird-id">More</td>
     <td><i>${birdInfo.gen} ${birdInfo.sp}</i></td>
     <td>${birdInfo.en}</td>
     <td>${birdInfo.length} min</td>
@@ -87,12 +96,10 @@ function renderTableRow(birdInfo = {}) {
     `;
 }
 
+//
 function renderFileInfo(birdId) {
   var url = `https://cors-anywhere.herokuapp.com/https://www.xeno-canto.org/api/2/recordings?query=nr:${birdId}`;
   var urlIFrame = `https://www.xeno-canto.org/${birdId}/embed?simple=1`;
-  var fileBody = document.getElementById("fileBody");
-  var fileTitle = document.getElementById("fileTitle");
-  var fileSubTitle = document.getElementById("fileSubTitle");
   var reproductor = $("#reproductor");
 
   reproductor.attr("src", urlIFrame);
@@ -106,6 +113,10 @@ function renderFileInfo(birdId) {
 
 function birdFileSection(response) {
   const birdData = response.recordings[0];
+  var fileBody = document.getElementById("fileBody");
+  var fileTitle = document.getElementById("fileTitle");
+  var fileSubTitle = document.getElementById("fileSubTitle");
+
   fileBody.innerHTML = renderBirdFile(birdData); // renders
   fileTitle.innerText = birdData.en; // renders title
   fileSubTitle.innerText = birdData.gen + " " + birdData.sp; // renders sub title
@@ -242,5 +253,14 @@ function smoothieScrollTo(id) {
         },
         1000
       );
+  }
+}
+
+// checks if window is scrolled more than 500px, adds/removes solid class
+function solidNavBar() {
+  if ($(this).scrollTop() > 500) {
+    $(".nav").addClass("solid");
+  } else {
+    $(".nav").removeClass("solid");
   }
 }

@@ -27,12 +27,16 @@ html {
 .title {
   padding-top: 50px;
   text-align: center;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 4em;
+  padding-top: 2%;
 }
 
 .sub-title {
   text-align: center;
   font-style: italic;
-  font-size: 1.7rem;
+  font-size: 2rem;
+  font-family: "Amatic SC", sans-serif;
 }
 
 .bold-text {
@@ -62,7 +66,14 @@ text-center {
   top: 0;
   z-index: 5;
   width: 100%;
+  height: 50px;
+  font-family: "Amatic SC", sans-serif;
+  font-size: 1.5em;
+}
+
+.solid {
   background-color: #f7f7f7;
+  transition: background-color 1s ease 0s;
 }
 
 .nav-link {
@@ -93,8 +104,9 @@ text-center {
 .display-4 {
   padding-top: 30px;
   padding-bottom: 10px;
-  font-family: montserrat;
+  font-family: "Amatic SC", sans-serif;
   font-weight: 400;
+  font-size: 6em;
 }
 
 .search-bars {
@@ -147,6 +159,11 @@ text-center {
   width: 160x;
 }
 
+.table-responsive {
+  max-width: 80%;
+  margin: auto;
+}
+
 .search-result {
   background-color: #f7f7f7;
 }
@@ -160,6 +177,19 @@ text-center {
   border-radius: 10px;
 }
 
+.dataTable tr.even {
+  background-color: #efefef;
+}
+
+.dataTable tr:hover {
+  background-color: #dccbc9;
+}
+
+.table.dataTable thead th {
+  background: #78544a;
+  color: #f7f7f7;
+}
+
 .location-map,
 .no-location-image {
   display: none;
@@ -169,6 +199,13 @@ text-center {
 .bird-file {
   background-image: url("../images/012.bird-file-pic.jpg");
   min-height: calc(100% - 40px);
+  padding-top: 46px;
+}
+
+.bird-file-text {
+  background-color: rgb(250, 250, 250, 0.8);
+  border-radius: 4px;
+  padding: 0 40px;
 }
 
 .table td,
@@ -225,7 +262,7 @@ text-center {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .carousel.slide {
@@ -248,10 +285,6 @@ text-center {
 
 .carousel-caption h5 {
   font-style: italic;
-}
-
-.suggestion-subtitle {
-  text-align: center;
 }
 
 /* Footer */
@@ -280,11 +313,6 @@ text-center {
 
 /* Media queries*/
 @media (min-width: 768px) {
-  .width-90 {
-    max-width: 90%;
-    margin: auto;
-  }
-
   .width-80 {
     max-width: 80%;
     margin: auto;
@@ -309,17 +337,8 @@ text-center {
   .jumbotron {
     margin: 0;
   }
-}
 
-.dataTable tr.even {
-  background-color: #efefef;
-}
 
-.dataTable tr:hover {
-  background-color: #dccbc9;
-}
-
-.table.dataTable thead th {
-  background: #78544a;
-  color: #f7f7f7;
+.table-responsive {
+  max-width: 90%;
 }
