@@ -66,7 +66,7 @@ text-center {
   top: 0;
   z-index: 5;
   width: 100%;
-  height: 50px;
+  height: 40px;
   font-family: "Amatic SC", sans-serif;
   font-size: 1.5em;
 }
@@ -81,12 +81,19 @@ text-center {
 }
 
 .nav-link:hover {
-  color: #ec3809;
+  /* color: #946767a1; */
+  font-weight: 700;
+  color: #352523;
 }
 
 /* home */
-.home {
+.parallax {
+  width: 100%;
+  height: calc(100vh - 40px);
   background-image: url("../images/01.home-pic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .jumbotron {
@@ -151,6 +158,15 @@ text-center {
 
 /* Search result*/
 
+.width-90 {
+  background-color: rgb(250, 250, 250, 0.8);
+  max-width: 90%;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 40px;
+}
+
 .dataTables_filter input {
   border-radius: 25px;
   outline: none;
@@ -165,7 +181,8 @@ text-center {
 }
 
 .search-result {
-  background-color: #f7f7f7;
+  background-color: #946767a1;
+  padding-bottom: 60px;
 }
 
 .dataTables_length label select {
@@ -186,7 +203,7 @@ text-center {
 }
 
 .table.dataTable thead th {
-  background: #78544a;
+  background: #946767a1;
   color: #f7f7f7;
 }
 
@@ -199,7 +216,7 @@ text-center {
 .bird-file {
   background-image: url("../images/012.bird-file-pic.jpg");
   min-height: calc(100% - 40px);
-  padding-top: 46px;
+  padding: 40px 0;
 }
 
 .bird-file-text {
@@ -249,20 +266,19 @@ text-center {
   padding: 40px 50px;
 }
 
-/* Suggestions */
+/* Surprised */
 
 .suggestions {
   background-image: url("../images/03.suggestions-pic.jpg");
 }
 
-.transparent-overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.8);
+.suggestions-col-12 {
+  max-width: 90%;
+  margin: auto;
+  background-color: rgb(250, 250, 250, 0.8);
+  border-radius: 10px;
+  margin-top: 30px;
+  padding-bottom: 40px;
 }
 
 .carousel.slide {
@@ -308,7 +324,9 @@ text-center {
 }
 
 .fab:hover {
-  color: #ec3809;
+  /* color: #946767a1; */
+  font-weight: 700;
+  color: #352523;
 }
 
 /* Media queries*/
@@ -330,6 +348,15 @@ text-center {
 }
 
 @media (max-width: 575.98px) {
+  .display-4 {
+    font-size: 4em;
+    margin-top: 40px;
+  }
+
+  .nav {
+    background-color: #f7f7f7;
+  }
+
   iframe#reproductor {
     width: 250px;
   }
@@ -338,7 +365,7 @@ text-center {
     margin: 0;
   }
 
-
-.table-responsive {
-  max-width: 90%;
+  .table-responsive {
+    max-width: 90%;
+  }
 }

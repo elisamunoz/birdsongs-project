@@ -3,6 +3,7 @@ $(document).ready(function() {
   $("#search-bird").click(searchBird);
   $("#surpriseMe").click(searchRandomly);
   initMap();
+  parallaxContent();
 
   $(window).scroll(solidNavBar); //??
 });
@@ -43,7 +44,7 @@ function searchBird() {
 }
 
 function searchRandomly() {
-  var birdList = [125694, 153133, 126083, 314575, 60001];
+  var birdList = [415790, 60001, 505950, 323716, 495866];
   // hidde content
 
   // get random birdId from array
@@ -263,4 +264,13 @@ function solidNavBar() {
   } else {
     $(".nav").removeClass("solid");
   }
+}
+
+function parallaxContent() {
+  const parllax = document.querySelector(".parallax");
+
+  window.addEventListener("scroll", function() {
+    let offset = window.pageYOffset;
+    parllax.style.backgroundPositionY = offset * 0.5 + "px";
+  });
 }
