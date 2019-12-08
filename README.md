@@ -4,7 +4,9 @@ Birdsongs of the World is a website dedicated to sharing bird sounds from all ov
 
 ## UX
 
-My goal is to create a user-friendly interactive frontend development project. The color scheme was taken from the predominant colours of the picture in the ![Home section](https://github.com/elisamunoz/birdsongs-project/blob/master/assets/images/mockup-images/multi-device-mockup.png).
+My goal is to create a user-friendly interactive frontend development project. The color scheme was taken from the predominant colours of the picture in the Home section.
+
+![Home section](https://github.com/elisamunoz/birdsongs-project/blob/master/assets/images/mockup-images/multi-device-mockup.png)
 
 I used [Moqups](https://moqups.com/) to do the previous design of this project. [Here is the link for the mockups](https://github.com/elisamunoz/birdsongs-project/tree/master/assets/images/mockup-images).
 The sections of the website are:
