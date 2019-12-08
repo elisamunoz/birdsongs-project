@@ -81,9 +81,8 @@ text-center {
 }
 
 .nav-link:hover {
-  /* color: #946767a1; */
   font-weight: 700;
-  color: #352523;
+  color: #2a201f;
 }
 
 /* home */
@@ -238,6 +237,12 @@ text-center {
   color: #ec3809;
 }
 
+#reproductor {
+  border: 0;
+  width: 340;
+  height: 115;
+}
+
 #map {
   height: 400px; /* The height is 400 pixels */
   width: 100%; /* The width is the width of the web page */
@@ -324,9 +329,8 @@ text-center {
 }
 
 .fab:hover {
-  /* color: #946767a1; */
   font-weight: 700;
-  color: #352523;
+  color: #2a201f;
 }
 
 /* Media queries*/
@@ -367,5 +371,11 @@ text-center {
 
   .table-responsive {
     max-width: 90%;
+  }
+
+  .suggestions-col-12 {
+    margin-top: 80px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 }

@@ -4,7 +4,12 @@ Birdsongs of the World is a website dedicated to sharing bird sounds from all ov
 
 ## UX
 
-My goal is to create a user-friendly interactive frontend development project. The color scheme was taken from the predominant colours of the picture in the Home section. The sections of the website are:
+My goal is to create a user-friendly interactive frontend development project. The color scheme was taken from the predominant colours of the picture in the Home section.
+
+![](https://github.com/elisamunoz/birdsongs-project/tree/master/assets/images/Mockup%20images/multi-device-mockup.png)
+
+I used [Moqups](https://moqups.com/) to do the previous design of this project. [Here is the link for the mockups](https://github.com/elisamunoz/birdsongs-project/tree/master/assets/images/Mockup%20images).
+The sections of the website are:
 
 ### Home:
 
@@ -26,7 +31,6 @@ Here is where I have a small summary of the Readme file.
 
 In this section you can see images of the 5 birds I chose for the "Surprise Me" button.
 
-
 ## Technologies
 
 - HTML
@@ -38,14 +42,15 @@ In this section you can see images of the 5 birds I chose for the "Surprise Me" 
 - JQuery
 
 ## Features
-* Connects to a third party API
-* Transparent to Solid navbar
-* Smoothie scroll to a specific element
-* Parallax effect
+
+- Connects to a third party API to obtain data and geolocate some of the information using Google Maps
+- Transparent to Solid navbar
+- Smoothie scroll to a specific element
+- Parallax effect
 
 ## Testing
 
-
+Since I started the project and after every modification, I have tested the website for mobile and desktop size using Chrome Dev Tool, I have also tested it on my mobile device. Once I finished the sections, I tested for every link I have clicking on them. To test user experience I sent the link of the project to my family and friends I validated the HTML code using the [W3C Markup Validation Service](https://validator.w3.org/).
 
 ## Deployment
 
@@ -55,13 +60,10 @@ This website is hosted and deployed using GitHub pages. The link to my website i
 
 This website has been possible to the [Xeno-Canto API](https://www.xeno-canto.org/article/153). All images were taken from [Pixabay](https://pixabay.com/) and [Google Images](https://images.google.com/).
 
+[Lost bird image](https://github.com/elisamunoz/birdsongs-project/blob/master/assets/images/lostbird.jpg) was taken from [this website](https://www.behance.net/gallery/51327889/Tourist-Pigeon) and modified by my friend Noemi Fernandez to adapt it to my project.
+
 Features were taken and modified from these websites:
 
-* Transparent to Solid navbar: [Codepen Pen](https://codepen.io/sonorangirl/pen/XmRBjq).
-* Smoothie scroll to a specific element: [A Beautiful Site](https://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2)
-* Parallax effect: [Codepen Pen](https://codepen.io/corneliuslabuschagne/pen/rNaNgdB?editors=1000)
-
-
-# Birdsongs of the World.
-
-
+- Transparent to Solid navbar: [Codepen Pen](https://codepen.io/sonorangirl/pen/XmRBjq).
+- Smoothie scroll to a specific element: [A Beautiful Site](https://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2)
+- Parallax effect: [Codepen Pen](https://codepen.io/corneliuslabuschagne/pen/rNaNgdB?editors=1000)
