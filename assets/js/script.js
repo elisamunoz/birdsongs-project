@@ -44,7 +44,7 @@ function searchBird() {
 }
 
 function searchRandomly() {
-  var birdList = [415790, 60001, 505950, 323716, 495866];
+  var birdList = [415790, 60001, 102382, 323716, 495866];
   // hidde content
 
   // get random birdId from array
@@ -219,7 +219,7 @@ function getApiData(url, cb) {
 }
 
 /* -------------------- */
-/* --- Render Map  --- */
+/* --- Render Map  ---- */
 /* -------------------- */
 function initMap() {
   setMapMarker({ lat: -38.6417, lng: -71.7017 });
@@ -242,6 +242,11 @@ function mapNotFound(img) {
   var errorImg = document.getElementById("map");
 }
 
+/* -------------------- */
+/* --- Others  ---- */
+/* -------------------- */
+
+// Smothie scroll to Id
 function smoothieScrollTo(id) {
   var target = $(`#${id}`);
 
@@ -265,6 +270,8 @@ function solidNavBar() {
     $(".nav").removeClass("solid");
   }
 }
+
+// Parallax effect
 
 function parallaxContent() {
   const parllax = document.querySelector(".parallax");

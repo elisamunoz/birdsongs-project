@@ -13,21 +13,21 @@ The sections of the website are:
 
 ### Home:
 
-For this section I wanted to create a simple landing page, for this I took [Google](https://www.google.com) as main inspiration. On this section I created a dropdown with a list of countries and a search bar where you can search birds by genus or scientific name sor even a combination of them. It also has an extra button which I named “Surprise me” button, when pressing it gives a random bird from a small list I created previously.
+For this section I wanted to create a simple landing page, for this I took [Google](https://www.google.com) as main inspiration. On this section I created a dropdown with a list of countries and a search bar where you can search birds by genus or scientific name or even a combination of them. It also has an extra button which I named “Surprise me” button, when pressing it gives a random bird from a small list I created previously. The buttons call the API and renders the information in the next sections.
 
-### Search result:
+#### Search result:
 
-This section shows the result of the search made at the Home screen. It shows the information in a table I took from [Data Table](https://datatables.net/). This table shows birds from a country or genus in particular. When pressing “more” sends you to the Bird File section.
+This section shows the result of the search made at the Home screen. It shows the information in a table using the [Data Table](https://datatables.net/) and modifying it. This table shows birds from a country or genus in particular. When pressing “more” sends you to the Bird File section.
 
-### Bird file:
+#### Bird file:
 
 In here you can find more information about the recording chosen, a player where you can listen to the chosen bird and a map showing where the recording was taken.
 
-## About:
+### About:
 
 Here is where I have a small summary of the Readme file.
 
-## Surprised?:
+### Surprised?:
 
 In this section you can see images of the 5 birds I chose for the "Surprise Me" button.
 
@@ -35,11 +35,14 @@ In this section you can see images of the 5 birds I chose for the "Surprise Me" 
 
 - HTML
 - CSS
+- Javascript
+- JQuery
 - Bootstrap (4.3.1)
 - Font Awesome (5.11.2)
 - Google Fonts
-- Javascript
-- JQuery
+* Google Maps API
+* Data Table
+
 
 ## Features
 
