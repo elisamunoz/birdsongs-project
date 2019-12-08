@@ -4,16 +4,14 @@ Birdsongs of the World is a website dedicated to sharing bird sounds from all ov
 
 ## UX
 
-My goal is to create a user-friendly interactive frontend development project. The color scheme was taken from the predominant colours of the picture in the Home section.
+My goal is to create a user-friendly interactive frontend development project. The color scheme was taken from the predominant colours of the picture in the ![Home section](https://github.com/elisamunoz/birdsongs-project/blob/master/assets/images/mockup-images/multi-device-mockup.png).
 
-![](https://github.com/elisamunoz/birdsongs-project/tree/master/assets/images/Mockup%20images/multi-device-mockup.png)
-
-I used [Moqups](https://moqups.com/) to do the previous design of this project. [Here is the link for the mockups](https://github.com/elisamunoz/birdsongs-project/tree/master/assets/images/Mockup%20images).
+I used [Moqups](https://moqups.com/) to do the previous design of this project. [Here is the link for the mockups](https://github.com/elisamunoz/birdsongs-project/tree/master/assets/images/mockup-images).
 The sections of the website are:
 
 ### Home:
 
-For this section I wanted to create a simple landing page, for this I took [Google](https://www.google.com) as main inspiration. On this section I created a dropdown with a list of countries,a search bar where you can search birds by country, genus or scientific name or even a combination of them. It also has an extra button which I named “Surprise me” button, when pressing it gives a random bird from a small list I created previously.
+For this section I wanted to create a simple landing page, for this I took [Google](https://www.google.com) as main inspiration. On this section I created a dropdown with a list of countries and a search bar where you can search birds by genus or scientific name sor even a combination of them. It also has an extra button which I named “Surprise me” button, when pressing it gives a random bird from a small list I created previously.
 
 ### Search result:
 
