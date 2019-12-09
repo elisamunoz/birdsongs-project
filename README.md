@@ -57,7 +57,15 @@ Since I started the project and after every modification, I have tested the webs
 
 ## Deployment
 
-This website is hosted and deployed using GitHub pages. The link to my website is: [Birdsongs of the World](https://elisamunoz.github.io/birdsongs-project/)
+My project was made using Visual Studio and I used GitHub to create an external version control repository to create back ups in case of unexpected major errors.
+* I created a new workspace in Visual Studio, creating all files and folder necessary. 
+* Imported the libraries I was going to use * Created a new repository in GitHub making regular commits and push to save my work.  
+* This project is hosted and deployed using GitHub pages. The link to my website is: [Birdsongs of the World](https://elisamunoz.github.io/birdsongs-project/)
+
+To run this project locally:
+* Click on the “Clone or Download” button
+* Copy the URL
+* Open a bash terminal and move it to a directory* Type “git clone” and paste the URL
 
 ## Credits
 
