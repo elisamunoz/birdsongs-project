@@ -176,7 +176,7 @@ text-center {
 
 .table-responsive {
   max-width: 80%;
-  margin: auto;
+  padding: 50px 15px;
 }
 
 .search-result {
