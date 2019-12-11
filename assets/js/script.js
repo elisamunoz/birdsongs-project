@@ -238,10 +238,6 @@ function setMapMarker(position = {}) {
   });
 }
 
-function mapNotFound(img) {
-  var errorImg = document.getElementById("map");
-}
-
 /* -------------------- */
 /* --- Others  ---- */
 /* -------------------- */

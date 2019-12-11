@@ -40,32 +40,40 @@ In this section you can see images of the 5 birds I chose for the "Surprise Me" 
 - Bootstrap (4.3.1)
 - Font Awesome (5.11.2)
 - Google Fonts
-* Google Maps API
-* Data Table
-
+- Google Maps API
+- Data Table
 
 ## Features
 
 - Connects to a third party API to obtain data and geolocate some of the information using Google Maps
+- DOM creation
 - Transparent to Solid navbar
 - Smoothie scroll to a specific element
 - Parallax effect
 
 ## Testing
 
+- Error message when pressing "Search" button with search fields empty
+- "No data available message" when the information is not found in the API
+- An image is shown in replace of Google Maps when location is not available in the API 
+
 Since I started the project and after every modification, I have tested the website for mobile and desktop size using Chrome Dev Tool, I have also tested it on my mobile device. Once I finished the sections, I tested for every link I have clicking on them. To test user experience I sent the link of the project to my family and friends I validated the HTML code using the [W3C Markup Validation Service](https://validator.w3.org/).
 
 ## Deployment
 
 My project was made using Visual Studio and I used GitHub to create an external version control repository to create back ups in case of unexpected major errors.
-* I created a new workspace in Visual Studio, creating all files and folder necessary. 
-* Imported the libraries I was going to use * Created a new repository in GitHub making regular commits and push to save my work.  
-* This project is hosted and deployed using GitHub pages. The link to my website is: [Birdsongs of the World](https://elisamunoz.github.io/birdsongs-project/)
+
+- I created a new workspace in Visual Studio, creating all files and folders necessary.
+- Imported the libraries I was going to use
+- Created a new repository in GitHub making regular commits and push to save my work.
+- This project is hosted and deployed using GitHub pages. The link to my website is: [Birdsongs of the World](https://elisamunoz.github.io/birdsongs-project/)
 
 To run this project locally:
-* Click on the “Clone or Download” button
-* Copy the URL
-* Open a bash terminal and move it to a directory* Type “git clone” and paste the URL
+
+- Click on the “Clone or Download” button
+- Copy the URL
+- Open a bash terminal and move it to a directory
+- Type “git clone” and paste the URL
 
 ## Credits
 
