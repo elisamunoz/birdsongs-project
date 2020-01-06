@@ -5,15 +5,30 @@ $(document).ready(function() {
   initMap();
   parallaxContent();
 
-  $(window).scroll(solidNavBar); //??
+  $(window).scroll(solidNavBar);
 });
 
 /* ----------------------------- */
 /* --- Get Info from API-------- */
 /* ----------------------------- */
 function searchBird() {
-  var country = $("#search-by-country").val();
-  var genus = $("#input-by-name").val();
+  const country = $("#search-by-country").val();
+  const genus = $("#input-by-name").val();
+
+  const params = {
+    country: country,
+    genus: genus
+  };
+
+  searchBirdCall(params);
+}
+
+function searchBirdCall(params = {}) {
+  // var country = $("#search-by-country").val();
+  // var genus = $("#input-by-name").val();
+  const country = params.country;
+  const genus = params.genus;
+
   var text = "";
   var textCountry = `Birds from ${country}`;
   var textGenus = `Birds with genus ${genus}`;
@@ -139,60 +154,17 @@ function birdFileSection(response) {
 
 function renderBirdFile(birdInfo) {
   return `
-    <tr>
-        <td class="bold-text">Register:</td>
-        <td>${birdInfo.id}</td>
-    </tr>
-                       
-    <tr>
-        <td class="bold-text">Recorder:</td>
-        <td>${birdInfo.rec}</td>
-    </tr>
-        
-    <tr>
-        <td class="bold-text">Length:</td>
-        <td>${birdInfo.length} min</td>
-    </tr>
-
-    <tr>
-        <td class="bold-text">Localization:</td>
-        <td>${birdInfo.loc}</td>
-    </tr>
-
-    <tr>
-        <td class="bold-text">Country:</td>
-        <td>${birdInfo.cnt}</td>
-    </tr>
-          
-    <tr>
-        <td class="bold-text">Uploaded:</td>
-        <td>${birdInfo.date}</td>
-    </tr>
-          
-    <tr>
-        <td class="bold-text">Time:</td>
-        <td>${birdInfo.time} hrs</td>
-    </tr>
-          
-    <tr>
-        <td class="bold-text">Latitude:</td>
-        <td>${birdInfo.lat}</td>
-    </tr>
-          
-    <tr>
-        <td class="bold-text">Longitude:</td>
-        <td>${birdInfo.lng}</td>
-    </tr>
-          
-    <tr>
-        <td class="bold-text">Altitude:</td>
-        <td>${birdInfo.alt} m</td>
-    </tr>
-          
-    <tr>
-        <td class="bold-text">Type:</td>
-        <td>${birdInfo.type}</td>
-    </tr>
+    ${renderBirdFileRow("Register", birdInfo.id)}
+    ${renderBirdFileRow("Recorder", birdInfo.rec)}
+    ${renderBirdFileRow("Length", birdInfo.length)}
+    ${renderBirdFileRow("Localization", birdInfo.loc)}
+    ${renderBirdFileRow("Country", birdInfo.cnt)}
+    ${renderBirdFileRow("Uploaded", birdInfo.date)}
+    ${renderBirdFileRow("Time", birdInfo.hrs)}
+    ${renderBirdFileRow("Latitude", birdInfo.lat)}
+    ${renderBirdFileRow("Longitude", birdInfo.lng)}
+    ${renderBirdFileRow("Altitude", birdInfo.alt)}
+    ${renderBirdFileRow("Type", birdInfo.type)}
     `;
 }
 

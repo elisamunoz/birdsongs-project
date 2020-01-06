@@ -42,6 +42,7 @@ In this section you can see images of the 5 birds I chose for the "Surprise Me" 
 - Google Fonts
 - Google Maps API
 - Data Table
+- Jasmine (2.7.0)
 
 ## Features
 
@@ -56,6 +57,7 @@ In this section you can see images of the 5 birds I chose for the "Surprise Me" 
 - Error message when pressing "Search" button with search fields empty
 - "No data available message" when the information is not found in the API
 - An image is shown in replace of Google Maps when location is not available in the API 
+- Jasmine to test function that renders Bird File section
 
 Since I started the project and after every modification, I have tested the website for mobile and desktop size using Chrome Dev Tool, I have also tested it on my mobile device. Once I finished the sections, I tested for every link I have clicking on them. To test user experience I sent the link of the project to my family and friends I validated the HTML code using the [W3C Markup Validation Service](https://validator.w3.org/).
 
