@@ -11,6 +11,8 @@ $(document).ready(function() {
 /* ----------------------------- */
 /* --- Get Info from API-------- */
 /* ----------------------------- */
+const apiUrl = `https://cors-anywhere.herokuapp.com/https://www.xeno-canto.org/api/2/recordings?query=`;
+
 function searchBird() {
   const country = $("#search-by-country").val();
   const genus = $("#input-by-name").val();
@@ -24,8 +26,6 @@ function searchBird() {
 }
 
 function searchBirdCall(params = {}) {
-  // var country = $("#search-by-country").val();
-  // var genus = $("#input-by-name").val();
   const country = params.country;
   const genus = params.genus;
 
@@ -52,7 +52,7 @@ function searchBirdCall(params = {}) {
     alert("Error, to do a search, you need to complete any of the fields.");
   }
 
-  var url = `https://cors-anywhere.herokuapp.com/https://www.xeno-canto.org/api/2/recordings?query=${queryCountry}${queryGenus}`;
+  const url = `${apiUrl}${queryCountry}${queryGenus}`;
 
   getApiData(url, renderTable);
   renderTitle(text);
@@ -114,7 +114,7 @@ function renderTableRow(birdInfo = {}) {
 
 //
 function renderFileInfo(birdId) {
-  var url = `https://cors-anywhere.herokuapp.com/https://www.xeno-canto.org/api/2/recordings?query=nr:${birdId}`;
+  const url = `${apiUrl}nr:${birdId}`;
   var urlIFrame = `https://www.xeno-canto.org/${birdId}/embed?simple=1`;
   var reproductor = $("#reproductor");
 
@@ -207,45 +207,5 @@ function setMapMarker(position = {}) {
   new google.maps.Marker({
     position: position,
     map: map
-  });
-}
-
-/* -------------------- */
-/* --- Others  ---- */
-/* -------------------- */
-
-// Smothie scroll to Id
-function smoothieScrollTo(id) {
-  var target = $(`#${id}`);
-
-  if (target.length) {
-    $("html, body")
-      .stop()
-      .animate(
-        {
-          scrollTop: target.offset().top
-        },
-        1000
-      );
-  }
-}
-
-// checks if window is scrolled more than 500px, adds/removes solid class
-function solidNavBar() {
-  if ($(this).scrollTop() > 500) {
-    $(".nav").addClass("solid");
-  } else {
-    $(".nav").removeClass("solid");
-  }
-}
-
-// Parallax effect
-
-function parallaxContent() {
-  const parllax = document.querySelector(".parallax");
-
-  window.addEventListener("scroll", function() {
-    let offset = window.pageYOffset;
-    parllax.style.backgroundPositionY = offset * 0.5 + "px";
   });
 }
