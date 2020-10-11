@@ -14,16 +14,6 @@
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/libraries/dataTable.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGHOfxrPTx6orZb42UTeMMV6ax5_4ezEc&callback=initMap"
-    async defer></script>
-    <script src="./assets/js/libraries/jquery-3.2.1.js"></script>
-    <script src="./assets/js/libraries/dataTable.js"></script>
-
-    <script src="https://kit.fontawesome.com/68fe0b31dc.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/helpers.js"></script>
-    <script src="./assets/js/script.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -44,7 +34,7 @@
 
     <!-- Home -->
     <div class="parallax">
-    <section class="home background-image">
+    <section class="home background-image vertical-center">
     <div class="jumbotron">
         <div class="container home-title-container">
             <h1 class="display-4">Birdsongs of the World</h1>
@@ -89,7 +79,7 @@
 
 
     <!-- Bird file -->
-    <section id="bird-file" class="bird-file background-image">
+    <section id="bird-file" class="bird-file background-image vertical-center">
       <div class="width-80 bird-file-text">
         <h1 id="fileTitle" class="title"><!--Title rendered with API information--></h1>
         <h2 id="fileSubTitle" class="sub-title"><i><!--Title rendered with API information--></i></h2>
@@ -107,7 +97,7 @@
               <div class="col-lg-6">
                 <div class="row">
                   <div class="col-12 text-center">
-                    <iframe id="reproductor" src=''></iframe>
+                    <iframe id="reproductor" src='#'></iframe>
                     <!-- Reproductor taken from xeno-canto.org -->
                   </div> 
                   <div class="col-12 map-margin">
@@ -124,7 +114,7 @@
 
     
     <!-- Footer-->
-     <section class="footer">
+     <footer>
       <div class="container">
           <ul class="list-inline social-links text-center col-sm-3">
               <li class="list-inline-item">
@@ -141,9 +131,21 @@
               </li>
           </ul>
         </div>
-    </section>
+    </footer>
     <!-- /Footer-->
 
+    <!--Scripts-->
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGHOfxrPTx6orZb42UTeMMV6ax5_4ezEc&callback=initMap"
+    async defer></script>
+    <script src="./assets/js/libraries/jquery-3.2.1.js"></script>
+    <script src="./assets/js/libraries/dataTable.js"></script>
+
+    <script src="https://kit.fontawesome.com/68fe0b31dc.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/helpers.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <!--/Scripts-->
 
 </body>
 </html>

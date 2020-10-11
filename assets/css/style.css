@@ -18,10 +18,16 @@ html {
   width: 100%;
   display: block;
   background-size: cover;
-  padding-top: 20px;
+  /* padding-top: 20px; */
   background-position: center;
   position: relative;
   background-attachment: fixed;
+}
+
+.vertical-center {
+  display: flex;
+  flex-grow: 1;
+  align-self: center;
 }
 
 .title {
@@ -58,6 +64,12 @@ text-center {
 .search-result,
 .bird-file {
   display: none;
+}
+.search-result.active,
+.bird-file.active {
+  display: flex;
+  flex-grow: 1;
+  align-self: center;
 }
 
 /* Header */
@@ -99,6 +111,7 @@ text-center {
   background-color: rgba(0, 0, 0, 0);
   text-align: center;
   margin-top: 7%;
+  margin: auto;
 }
 
 .home-title-container {
@@ -159,11 +172,10 @@ text-center {
 
 .width-90 {
   background-color: rgb(250, 250, 250, 0.8);
-  max-width: 90%;
-  padding-bottom: 20px;
+  width: 80%;
+  max-width: 1800px;
+  margin: 20px auto;
   border-radius: 10px;
-  margin: auto;
-  margin-top: 40px;
 }
 
 .dataTables_filter input {
@@ -182,7 +194,7 @@ text-center {
 
 .search-result {
   background-color: #946767a1;
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
 }
 
 .dataTables_length label select {
@@ -216,13 +228,13 @@ text-center {
 .bird-file {
   background-image: url("../images/012.bird-file-pic.jpg");
   min-height: calc(100% - 40px);
-  padding: 40px 0;
 }
 
 .bird-file-text {
   background-color: rgb(250, 250, 250, 0.8);
   border-radius: 4px;
   padding: 0 40px;
+  margin: 20px auto;
 }
 
 .table td,
@@ -264,7 +276,6 @@ text-center {
 
 .about-text {
   margin: auto;
-  margin-top: 7%;
   max-width: 1200px;
   text-align: center;
   background-color: rgb(250, 250, 250, 0.8);
@@ -273,6 +284,10 @@ text-center {
 }
 
 /* Surprised */
+
+.surprised-content {
+  margin: auto;
+}
 
 .suggestions {
   background-image: url("../images/03.suggestions-pic.jpg");
@@ -290,7 +305,8 @@ text-center {
 
 .carousel.slide {
   margin: auto;
-  width: 80%;
+  /* width: 80%; */
+  /* height: 70%; */
   margin-top: 3%;
 }
 
@@ -312,7 +328,7 @@ text-center {
 
 /* Footer */
 
-.footer {
+footer {
   background-color: #f7f7f7;
   height: 40px;
   padding-top: 6px;
@@ -338,8 +354,8 @@ text-center {
 /* Media queries*/
 @media (min-width: 768px) {
   .width-80 {
-    max-width: 80%;
-    margin: auto;
+    width: 80%;
+    max-width: 1800px;
   }
 }
 

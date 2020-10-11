@@ -95,7 +95,8 @@ function renderTable(birdInfo = {}) {
   table.DataTable().draw();
 
   //adds smoothie scroll to search result section
-  $(".search-result").fadeIn(1000);
+  // $(".search-result").fadeIn(1000);
+  $(".search-result").addClass('active');
   smoothieScrollTo("search-result");
 }
 
@@ -123,7 +124,7 @@ function renderFileInfo(birdId) {
   getApiData(url, birdFileSection);
 
   // add smothie scroll to Bird File section
-  $(".bird-file").fadeIn(1000);
+  $(".bird-file").addClass('active');
   smoothieScrollTo("bird-file");
 }
 
