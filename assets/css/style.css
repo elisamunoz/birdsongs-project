@@ -18,7 +18,6 @@ html {
   width: 100%;
   display: block;
   background-size: cover;
-  /* padding-top: 20px; */
   background-position: center;
   position: relative;
   background-attachment: fixed;
@@ -381,10 +380,6 @@ footer {
 
   iframe#reproductor {
     width: 250px;
-  }
-
-  .jumbotron {
-    margin: 0;
   }
 
   .table-responsive {
